@@ -1,0 +1,24 @@
+{
+    "name": "local-spark/reviewqueue-v1",
+    "description": "Review Queue v1 PHP 5.4+ library",
+    "keywords": ["Review Queue", "API", "package"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Petsche",
+            "email": "petschephp@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "ReviewQueueV1\\": "src/"
+        }
+    }
+}
