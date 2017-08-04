@@ -15,7 +15,7 @@ try {
     $reviewsAPI = $reviewQueueApi->reviews();
 
     // Get first page of reviews
-    $firstPageOfReviews = $reviewsAPI->getAll();
+    $firstPageOfReviews = $reviewsAPI->getAll(200, 1);
     $allReviews[1] = $firstPageOfReviews;
 
     //

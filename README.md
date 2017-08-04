@@ -39,8 +39,9 @@ try {
 20 Reviews are returned in each request
 ```php
 try {
-
-    $firstPageOfReviews = $reviewsAPI->getAll();
+    
+    // Retrieve 200 reviews per request
+    $firstPageOfReviews = $reviewsAPI->getAll(200);
 
     // Page meta
     $currentPage = $reviewsAPI->meta->currentPage;

@@ -22,12 +22,14 @@ class ReviewsApi extends BaseApi
     }
 
     /**
+     * @param int $pageSize
+     * @param int $page
      * @return array|ReviewEntity[]
      */
-    public function getAll($page = 1)
+    public function getAll($pageSize = 20, $page = 1)
     {
         $response = $this->client->request(CurlClient::METHOD_GET, sprintf('%s/reviews', self::ENDPOINT),
-            ['page' => $page]);
+            ['page' => $page, 'page_size' => $pageSize]);
 
         if ($this->client->responseCode == 200) {
 
